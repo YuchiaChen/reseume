@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chartjs</title>
+    <style>
+    #myChart{
+      width: 100%;
+
+    }
+      
+    </style>
+</head>
+<body>
+  <canvas id="myChart" style="width: 100%;"></canva>
+
+
+
+<!-- まJquery1.12.4'body挡ぇ玡 -->
+<script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+  <!-- まchatjsJqueryぇ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <!-- 程璶絪糶Javascript -->
+
+
+<script>
+var myChart=document.getElementById('myChart');
+    // 玡ㄢ︽よΑ
+    //JQuery糶猭
+  // var myChart=$('#myChart');
+var pointImg = new Image();
+    pointImg.src = "https://pic.pimg.tw/yide168/1470999822-1242872028.png";
+    pointImg.width=30;
+    pointImg.height=30;
+
+
+
+var data={  //data柑Τぐ或ン
+      labels:["Apple" , "Banana" ,"Orange"],
+      datasets:[
+      {
+        label:"计秖",
+        data:["52","47","93"],
+        backgroundColor:"rgba(222,100,80,0.5)",
+        borderWidth:5,
+        borderColor: "#0f0",
+        lineTension: 0,
+        pointStyle:pointImg,
+        fill:1
+       
+        },
+        {
+          label:"计秖2",
+        data:["33","40","63"],
+        backgroundColor:"transparent",
+        borderWidth:10,
+        borderColor: "#000",
+        steppedLine:true,
+
+        },
+      ],
+
+    };
+
+
+     var options = {
+     scales:{
+          yAxes:[{//y禸
+                ticks:{
+            beginAtZero:true,
+            max:100,
+            
+          },
+            gridLines:{
+            display:false
+            }
+          }], 
+          xAxes:[{//x禸
+          barPercentage:0.5
+
+          }],
+        },
+        };
+
+
+
+
+
+
+  var myCanvas=new Chart(myChart,{//肚癳ぐ或ンmyChart
+    type:"line",//传ぃ常琌パtype暗э
+    data:data,
+   options: options
+
+  });
+
+
+</script>
+</body>
+</html>

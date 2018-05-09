@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chartjs</title>
+    <style>
+    #myChart{
+    	width: 100%;
+
+    }
+    	
+    </style>
+</head>
+<body>
+	<canvas id="myChart" style="width: 100%;"></canvas>
+  <button class="update-chart">update</button>
+
+
+
+<!-- まJquery1.12.4'body挡ぇ玡 -->
+<script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+  <!-- まchatjsJqueryぇ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <!-- 程璶絪糶Javascript -->
+
+
+<script>
+var myChart=document.getElementById('myChart');
+    // 玡ㄢ︽よΑ
+    //JQuery糶猭
+  // var myChart=$('#myChart');
+
+var data={  //data柑Τぐ或ン
+      labels:["Apple" , "Banana" ,"Orange"],
+      datasets:[
+      {
+        label:"计秖",
+        data:["52","47","93"],
+        backgroundColor:["rgba(155,155,5,0.5)","#49668D","#28B375"],
+        borderWidth:5,
+        borderColor:"#000",
+        },
+        
+       
+        {
+           label:"计秖2",
+        data:["33","40","63"],
+        backgroundColor:["rgba(255,0,0,0.5)","rgba(0,255,0,0.5)","rgba(0,0,255,0.5)"],
+        borderWidth:5,
+        
+        },
+      ],
+
+    };
+
+
+     var options = {
+      rotation:-0.3*Math.PI,
+     
+        };
+
+
+    var newdata={  //data柑Τぐ或ン
+      labels:["AA" , "BB" ,"OO"],
+      datasets:[
+      {
+        label:"计秖",
+        data:["22","27","83"],
+        backgroundColor:["rgba(155,155,5,0.5)","#49668D","#28B375"],
+        borderWidth:5,
+        borderColor:"#000",
+        },
+        
+       
+        {
+           label:"计秖2",
+        data:["53","60","23"],
+        backgroundColor:["rgba(255,0,0,0.5)","rgba(0,255,0,0.5)","rgba(0,0,255,0.5)"],
+        borderWidth:5,
+        
+        },
+      ],
+
+    };
+
+    $('.update-chart').click(function(){
+        myCanvas.data=newdata;
+        myCanvas.update();  //р穝戈侣戈
+
+    })
+
+
+
+	var myCanvas=new Chart(myChart,{//肚癳ぐ或ンmyChart
+		type:"doughnut",//传ぃ常琌パtype暗э
+		data:data,
+	  options: options
+
+	});
+
+
+
+</script>
+</body>
+</html>

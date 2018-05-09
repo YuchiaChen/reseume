@@ -1,0 +1,111 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chartjs</title>
+    <style>
+    #myChart{
+    	width: 100%;
+
+    }
+    	
+    </style>
+</head>
+<body>
+	<canvas id="myChart" style="width: 100%;"></canva>
+
+
+
+<!-- まJquery1.12.4'body挡ぇ玡 -->
+<script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+  <!-- まchatjsJqueryぇ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <!-- 程璶絪糶Javascript -->
+<script>
+	//JSネ糶猭
+	var myChart=document.getElementById('myChart');
+    // 玡ㄢ︽よΑ
+    //JQuery糶猭
+	// var myChart=$('#myChart');
+var data={  //data柑Τぐ或ン
+    	labels:["Apple" , "Banana" ,"Orange"],
+    	datasets:[
+    	{
+    		label:"计秖",
+    		data:["-12","23","53"],
+    		backgroundColor:["rgba(155,155,5,0.5)","#49668D","#28B375"],
+    		borderWidth:[1,2,3],
+    		borderColor: "#000",
+    		hoverBorderColor:"rgba(255,5,5,0.5)",
+        },
+        {
+        	label:"计秖2",
+    		data:["18","21","63"],
+    		backgroundColor:["rgba(155,155,5,0.5)","#49668D","#28B375"],
+    		borderColor: "#000",
+    		hoverBorderColor:"rgba(255,5,5,0.5)",
+
+        },
+    	],
+
+    };
+
+
+     var options = {
+     scales:{
+      		yAxes:[{//y禸
+      	        ticks:{
+    	 			beginAtZero:true,
+    	 			max:100,
+      				min:-100,
+     			}
+      		}], 
+      		xAxes:[{//x禸
+    	 		barPercentage:0.5
+
+       		}],
+       	},
+
+       	animation:{
+       		duration:10000
+       	},
+       
+
+       tooltips: {
+       		backgroundColor:"rgb(0,200,0,0.5)",
+       		borderColor:"#000",
+       		borderWidth:3,
+            callbacks: {
+                label: function(tooltipItem, data) {
+                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                    if (label) {
+                        label += ': ';
+                    }
+                    if(data.datasets[tooltipItem.datasetIndex].myCustomName){
+                    	lebel +=data.datasets[tooltipItem.datasetIndex].myCustomName;
+                    }
+                    label += Math.round(tooltipItem.yLabel * 100) / 100;
+                    return label;
+                }
+            }
+        }
+
+    };
+
+
+	var myCanvas=new Chart(myChart,{//肚癳ぐ或ンmyChart
+		type:"bar",//传ぃ常琌パtype暗э
+		data:data,
+	    options: options
+
+	});
+
+
+</script>
+</body>
+</html>
