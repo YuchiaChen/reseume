@@ -17,27 +17,27 @@
 
 
 
-<!-- ¥ı¤Ş¤JJquery1.12.4ª©'©ñ¦bbodyµ²§ô¤§«e -->
+<!-- å…ˆå¼•å…¥Jquery1.12.4ç‰ˆ'æ”¾åœ¨bodyçµæŸä¹‹å‰ -->
 <script
   src="https://code.jquery.com/jquery-1.12.4.js"
   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
   crossorigin="anonymous"></script>
-  <!-- ¤Ş¤Jchatjs©ñ¦bJquery¤§«á -->
+  <!-- å¼•å…¥chatjsæ”¾åœ¨Jqueryä¹‹å¾Œ -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-  <!-- ³Ì«á¤~©ñ¦Û¤v­n½s¼gªºJavascript -->
+  <!-- æœ€å¾Œæ‰æ”¾è‡ªå·±è¦ç·¨å¯«çš„Javascript -->
 
 
 <script>
 var myChart=document.getElementById('myChart');
-    // «e«á¨â¦æ¬°¬Û¦Pªº¤è¦¡
-    //JQuery¼gªk
+    // å‰å¾Œå…©è¡Œç‚ºç›¸åŒçš„æ–¹å¼
+    //JQueryå¯«æ³•
   // var myChart=$('#myChart');
 
-var data={  //«Å§i¤@­Ódata¸Ì­±¦³¤°»òª«¥ó
+var data={  //å®£å‘Šä¸€å€‹dataè£¡é¢æœ‰ä»€éº¼ç‰©ä»¶
       labels:["Apple" , "Banana" ,"Orange"],
       datasets:[
       {
-        label:"¼Æ¶q",
+        label:"æ•¸é‡",
         data:["52","47","93"],
         backgroundColor:["rgba(155,155,5,0.5)","#49668D","#28B375"],
         borderWidth:5,
@@ -46,7 +46,7 @@ var data={  //«Å§i¤@­Ódata¸Ì­±¦³¤°»òª«¥ó
         
        
         {
-           label:"¼Æ¶q2",
+           label:"æ•¸é‡2",
         data:["33","40","63"],
         backgroundColor:["rgba(255,0,0,0.5)","rgba(0,255,0,0.5)","rgba(0,0,255,0.5)"],
         borderWidth:5,
@@ -63,11 +63,11 @@ var data={  //«Å§i¤@­Ódata¸Ì­±¦³¤°»òª«¥ó
         };
 
 
-    var newdata={  //«Å§i¤@­Ódata¸Ì­±¦³¤°»òª«¥ó
+    var newdata={  //å®£å‘Šä¸€å€‹dataè£¡é¢æœ‰ä»€éº¼ç‰©ä»¶
       labels:["AA" , "BB" ,"OO"],
       datasets:[
       {
-        label:"¼Æ¶q",
+        label:"æ•¸é‡",
         data:["22","27","83"],
         backgroundColor:["rgba(155,155,5,0.5)","#49668D","#28B375"],
         borderWidth:5,
@@ -76,7 +76,7 @@ var data={  //«Å§i¤@­Ódata¸Ì­±¦³¤°»òª«¥ó
         
        
         {
-           label:"¼Æ¶q2",
+           label:"æ•¸é‡2",
         data:["53","60","23"],
         backgroundColor:["rgba(255,0,0,0.5)","rgba(0,255,0,0.5)","rgba(0,0,255,0.5)"],
         borderWidth:5,
@@ -88,14 +88,14 @@ var data={  //«Å§i¤@­Ódata¸Ì­±¦³¤°»òª«¥ó
 
     $('.update-chart').click(function(){
         myCanvas.data=newdata;
-        myCanvas.update();  //§â·s¸ê®Æ¨ú¥NÂÂ¸ê®Æ
+        myCanvas.update();  //æŠŠæ–°è³‡æ–™å–ä»£èˆŠè³‡æ–™
 
     })
 
 
 
-	var myCanvas=new Chart(myChart,{//¶Ç°e¤°»òª«¥ó¨ìmyChart
-		type:"doughnut",//´«¤£¦Pªí®æ³£¬O¥Ñtype¥h°µ­×§ï
+	var myCanvas=new Chart(myChart,{//å‚³é€ä»€éº¼ç‰©ä»¶åˆ°myChart
+		type:"doughnut",//æ›ä¸åŒè¡¨æ ¼éƒ½æ˜¯ç”±typeå»åšä¿®æ”¹
 		data:data,
 	  options: options
 
